@@ -264,6 +264,7 @@ export class State {
 }
 
 export interface IImageInfo {
+  media_type: string;
   url: string;
   /**
    * 没有的话会自动拉取
