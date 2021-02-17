@@ -160,6 +160,12 @@ export default class ImageViewer extends React.Component<Props, State> {
       this.setState({ imageSizes });
     };
 
+    if (image.media_type === 'video') {
+        imageStatus.status = 'success';
+        saveImageSize();
+        return;
+    }
+    
     if (this!.state!.imageSizes![index].status === 'success') {
       // 已经加载过就不会加载了
       return;
@@ -560,7 +566,7 @@ export default class ImageViewer extends React.Component<Props, State> {
               minScale={this.props.minScale}
               maxScale={this.props.maxScale}
             >
-              {this!.props!.renderImage!(image.props)}
+              {this!.props!.renderImage!(image)}
             </ImageZoom>
           );
         case 'fail':
