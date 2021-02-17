@@ -7,7 +7,6 @@
   "scripts": {
     "prepare": "rm -rf built && tsc",
     "start": "tsc -w --outDir demo/built",
-    "postinstall": "tsc --outDir ./build"
   },
   "repository": {
     "type": "git",
