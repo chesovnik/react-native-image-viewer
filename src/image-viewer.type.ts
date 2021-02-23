@@ -15,6 +15,8 @@ export class Props {
    * 是否显示
    */
   public show?: boolean = false;
+  
+  public isVideo?: boolean = false;
 
   /**
    * 图片数组

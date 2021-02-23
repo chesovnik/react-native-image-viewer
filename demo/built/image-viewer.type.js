@@ -9,6 +9,7 @@ var Props = /** @class */ (function () {
          * 是否显示
          */
         this.show = false;
+        this.isVideo = false;
         /**
          * 图片数组
          */

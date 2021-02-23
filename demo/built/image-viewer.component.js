@@ -72,6 +72,9 @@ var ImageViewer = /** @class */ (function (_super) {
          */
         _this.handleHorizontalOuterRangeOffset = function (offsetX) {
             if (offsetX === void 0) { offsetX = 0; }
+            if (_this.props.isVideo) {
+                return;
+            }
             _this.positionXNumber = _this.standardPositionX + offsetX;
             _this.positionX.setValue(_this.positionXNumber);
             var offsetXRTL = !react_native_1.I18nManager.isRTL ? offsetX : -offsetX;

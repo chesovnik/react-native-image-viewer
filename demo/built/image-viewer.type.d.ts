@@ -12,6 +12,7 @@ export declare class Props {
      * 是否显示
      */
     show?: boolean;
+    isVideo?: boolean;
     /**
      * 图片数组
      */

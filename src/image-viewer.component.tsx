@@ -236,6 +236,10 @@ export default class ImageViewer extends React.Component<Props, State> {
    * 触发溢出水平滚动
    */
   public handleHorizontalOuterRangeOffset = (offsetX: number = 0) => {
+    if (this.props.isVideo) {
+      return;
+    }
+
     this.positionXNumber = this.standardPositionX + offsetX;
     this.positionX.setValue(this.positionXNumber);
 
