@@ -97,6 +97,9 @@ var Props = /** @class */ (function () {
         this.onMove = function () {
             //
         };
+        this.onExit = function () {
+            //
+        };
         /**
          * 自定义头部
          */

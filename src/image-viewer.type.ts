@@ -139,6 +139,10 @@ export class Props {
     //
   };
 
+  public onExit?: () => void = () => {
+    //
+  };
+
   /**
    * 自定义头部
    */

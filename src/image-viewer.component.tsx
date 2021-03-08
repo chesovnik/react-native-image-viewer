@@ -341,6 +341,7 @@ export default class ImageViewer extends React.Component<Props, State> {
     if (this.state.currentShowIndex === this.props.imageUrls.length - 1) {
       // 回到之前的位置
       this.resetPosition.call(this);
+      this.props.onExit && this.props.onExit();
       return;
     }
 
@@ -633,9 +634,9 @@ export default class ImageViewer extends React.Component<Props, State> {
                 </TouchableOpacity>
               </View>
             )}
-          <View style={[{ bottom: 0, position: 'absolute', zIndex: 9 }, this.props.footerContainerStyle]}>
+          <TouchableOpacity style={[{ bottom: 0, position: 'absolute', zIndex: 9 }, this.props.footerContainerStyle]}>
             {this!.props!.renderFooter!(this.state.currentShowIndex || 0)}
-          </View>
+          </TouchableOpacity>
         </Animated.View>
       </Animated.View>
     );

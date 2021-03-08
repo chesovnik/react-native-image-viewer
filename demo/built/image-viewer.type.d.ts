@@ -100,6 +100,7 @@ export declare class Props {
      */
     onSave?: (url: string) => void;
     onMove?: (position?: IOnMove) => void;
+    onExit?: () => void;
     /**
      * 自定义头部
      */

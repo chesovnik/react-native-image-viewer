@@ -167,6 +167,7 @@ var ImageViewer = /** @class */ (function (_super) {
             if (_this.state.currentShowIndex === _this.props.imageUrls.length - 1) {
                 // 回到之前的位置
                 _this.resetPosition.call(_this);
+                _this.props.onExit && _this.props.onExit();
                 return;
             }
             _this.positionXNumber = !react_native_1.I18nManager.isRTL
@@ -528,9 +529,9 @@ var ImageViewer = /** @class */ (function (_super) {
                   <react_native_1.Text style={this.styles.watchOriginText}>查看原图(2M)</react_native_1.Text>
                 </react_native_1.TouchableOpacity>
               </react_native_1.View>)}
-          <react_native_1.View style={[{ bottom: 0, position: 'absolute', zIndex: 9 }, this.props.footerContainerStyle]}>
+          <react_native_1.TouchableOpacity style={[{ bottom: 0, position: 'absolute', zIndex: 9 }, this.props.footerContainerStyle]}>
             {this.props.renderFooter(this.state.currentShowIndex || 0)}
-          </react_native_1.View>
+          </react_native_1.TouchableOpacity>
         </react_native_1.Animated.View>
       </react_native_1.Animated.View>);
     };
