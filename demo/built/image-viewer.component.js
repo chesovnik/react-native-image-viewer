@@ -529,7 +529,7 @@ var ImageViewer = /** @class */ (function (_super) {
                   <react_native_1.Text style={this.styles.watchOriginText}>查看原图(2M)</react_native_1.Text>
                 </react_native_1.TouchableOpacity>
               </react_native_1.View>)}
-          <react_native_1.TouchableOpacity style={[{ bottom: 0, position: 'absolute', zIndex: 9 }, this.props.footerContainerStyle]}>
+          <react_native_1.TouchableOpacity onPress={this.goNext} style={[{ bottom: 0, position: 'absolute', zIndex: 9 }, this.props.footerContainerStyle]}>
             {this.props.renderFooter(this.state.currentShowIndex || 0)}
           </react_native_1.TouchableOpacity>
         </react_native_1.Animated.View>
